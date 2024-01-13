@@ -22,7 +22,7 @@ export default function App() {
     // because we need to grab the existing item from last statem
     // And update to the new state
     // always return an array of new items
-    setTodos((currentTodos) => {
+    setTodos(currentTodos => {
       // since I cannot change the value in todos state
       // use spread(...) with todos which return a new array
       return [
@@ -34,19 +34,16 @@ export default function App() {
         },
       ];
     });
-
+    console.log(todos);
     setNewItem("")
   }
   return (
     <>
       <form onSubmit={handleSubmit} className="new-item-form">
         <label htmlFor="item">New Item</label>
-        <input type="text" id="item" />
-        <button
-          value={newItem}
-          onChange={(e) => console.log(e.target)}
-          className="btn"
-        >
+        <input type="text" id="item" value={newItem}
+          onChange={(e) => setNewItem(e.target.value)} />
+        <button className="btn">
           Add
         </button>
       </form>

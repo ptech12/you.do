@@ -1,12 +1,23 @@
 import NewTodo from "./NewTodo";
 import TodoList from "./TodoList";
 import "./style.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function App() {
-  const [todos, setTodos] = useState([]);
-  // console.log(todos);
-  // console.log(newItem);
+  const [todos, setTodos] = useState(() => {
+    const localValue = localStorage.getItem("ITEMS")
+    if (localValue == null) return [];
+    return JSON.parse(localValue)
+  });
+
+  // useEffect hoook
+  // run thee callback function inside useEffect 
+  // whenever the second param changes
+  useEffect(() => {
+    // saving to the localstorage
+    localStorage.setItem("ITEMS", JSON.stringify(todos))
+  }, [todos])
+
 
   function addTodo(title){
     setTodos(currentTodos => {

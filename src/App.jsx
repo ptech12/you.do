@@ -43,9 +43,9 @@ export default function App() {
   return (
     <>
 
-      <NewTodo onSubmbit={addTodo} /> 
+      <NewTodo onSubmit={addTodo} /> 
       <h1 className="header">TODO LIST</h1>
-      <TodoList todos={todos}/>
+      <TodoList todos={todos } toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
     </>
   );
 }

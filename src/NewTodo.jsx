@@ -22,7 +22,7 @@ export default function NewTodo({ onSubmit }) {
 
         if(newItem === "") return
         onSubmit(newItem)
-        console.log(todos);
+        // console.log(todos);
         setNewItem("")
       }
   return (

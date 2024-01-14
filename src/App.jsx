@@ -53,9 +53,9 @@ export default function App() {
 
   return (
     <>
-
+      <h1>You.Do</h1>
       <NewTodo onSubmit={addTodo} /> 
-      <h1 className="header">TODO LIST</h1>
+      <h1 className="header">LIST</h1>
       <TodoList todos={todos } toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
     </>
   );

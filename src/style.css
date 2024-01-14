@@ -139,3 +139,16 @@
     background: hsl(200, 100%, 30%);
   }
   
+
+.notepad{
+  width: 50px;
+  height: 25px;
+  /* font-size: 14px; */
+  transition: width 0.5s linear, height 0.5s linear;
+
+}
+
+.notepad:hover{
+  height: 30px;
+  width: 60px;
+}

@@ -1,5 +1,6 @@
 import { useState } from "react";
-
+import ReactLogo from "../assets/notepad.svg";
+import './style.css'
 
 export default function NewTodo({ onSubmit }) {
     const [newItem, setNewItem] = useState("");
@@ -27,7 +28,12 @@ export default function NewTodo({ onSubmit }) {
       }
   return (
     <form onSubmit={handleSubmit} className="new-item-form">
-      <label htmlFor="item">New Item</label>
+      <label htmlFor="item">
+        New Item 
+      <img src={ReactLogo} className="notepad" alt="React Logo" />
+        
+      </label>
+      
       <input
         type="text"
         id="item"
